@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-brand-navy: #141b4d;
+  --color-brand-blue: #2e71fe;
+
+  --color-ink: oklch(0.22 0.03 266);
+  --color-ink-muted: oklch(0.46 0.02 266);
+
+  --color-surface: oklch(0.99 0.004 266);
+  --color-surface-2: oklch(0.975 0.008 266);
+
+  --color-border: oklch(0.87 0.01 266);
+  --color-danger: oklch(0.58 0.2 25);
+  --color-warning: oklch(0.78 0.15 80);
+  --color-success: oklch(0.63 0.16 145);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  text-rendering: geometricPrecision;
+}
+
+:focus-visible {
+  outline: 2px solid
+    color-mix(in oklab, var(--color-brand-blue) 70%, oklch(1 0 0));
+  outline-offset: 2px;
+}
