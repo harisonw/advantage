@@ -483,8 +483,8 @@ export function getDeal(id: string = "AF-2026-00417"): Deal {
 			status: employmentPass ? "pass" : "fail",
 			rule: "Match between broker application and previous application (accounting for elapsed time where applicable).",
 			explanation: employmentPass
-				? "Employment duration is consistent with the previous approved application."
-				: "Employment duration differs from the previous approved application.",
+				? "Employment duration is consistent with the previous approved application (approved 15/01/2025, ~14 months elapsed)."
+				: "Employment duration differs from the previous approved application (approved 15/01/2025, ~14 months elapsed).",
 			evidence: [
 				{
 					sourceLabel: "Broker application",
@@ -495,7 +495,7 @@ export function getDeal(id: string = "AF-2026-00417"): Deal {
 					sourceLabel: "Previous application",
 					documentId: "previous-application",
 					value: `${extracted.customer.prevEmploymentYears} years`,
-					note: "Previous application values are verified against historical CRM records.",
+					note: "Value from previous approved application AF-2024-08831 (approved 15/01/2025).",
 				},
 			],
 			pasDraft: employmentPass

@@ -9,6 +9,7 @@ To install dependencies and run the development server locally, run:
 curl -fsSL https://bun.sh/install | bash
 
 # Install dependencies and start the app
+cd frontend
 bun install
 bun run dev
 ```
@@ -41,11 +42,18 @@ This prototype demonstrates an automated **field reconciliation workspace** desi
 
 We built a single-page interactive workspace focusing on **maximising human efficiency** for the existing stages 2-4. Its just a prototype to show how an agent can run the checks and then we can display the data in a way that minimizes the time it takes to review and act on discrepancies while still keeping the user in control and able to view the full source documents when needed.
 
+![alt text](image.png)
+
 - **Unified Dashboard**: Deals are categorized by status. Deals marked `Ready` stand out with an "Open" action button in green, while deals with failed/pending checks show "Reconcile" in amber or blue. A checklist breakdown matrix (Pass, Fail, Review, Update) gives immediate visibility.
+  ![alt text](image-1.png)
 - **Split-Pane Workspace**: Combines the **Checklist** (left), the **Check Details/Evidence** showing direct value comparisons (middle), and the **Document Viewer** (right) into a single, cohesive interface. This eliminates the manual document comparison chore.
+  ![alt text](image-2.png)
 - **Dynamic PAS Snagging & Resolution**: Administrators can instantly click "Raise PAS Notification" which automatically drafts a snippet, moves the check to a pulsing `Pending Update` state, and blocks sign-off until corrected.
+  ![alt text](image-3.png)
 - **Confirmation & Payout Flow**: When all checks pass or are manually resolved, a "Sign off deal" button unlocks. Clicking it opens a confirmation dialog, updates the status to "Paid out", and saves/downloads the compiled document pack.
+  ![alt text](image-4.png)
 - **Confirmation of Payee (CoP) Check**: Integrated a new automated bank lookup service to verify bank details against the payee name before funding.
+  ![alt text](image-5.png)
 
 ---
 
